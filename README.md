@@ -1,6 +1,6 @@
 # Simple-Neural-Network-MNIST
 
-This project trains a neural network to recognize handwritten digits using the MNIST dataset and evaluates its performance. 
+This project trains a neural network to recognize handwritten digits using the MNIST dataset and then tests its performance. 
 It also allows you to test the model on your custom images.
 
 Features:
@@ -13,7 +13,7 @@ Predicts handwritten digits from custom images.
 Setup:
 
 pip install tensorflow numpy matplotlib opencv-python
-Clone this repository and navigate to the project folder.
+Clone this repository and go to the project folder
 
 Train the model:
 

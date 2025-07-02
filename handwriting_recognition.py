@@ -16,17 +16,20 @@ image_folder = "Images"
 # Helper function to preprocess the image
 def preprocess_image(file_path):
     img = cv2.imread(file_path, cv2.IMREAD_GRAYSCALE)  # Convert to grayscale
-    # Check the proportion of white pixels
-    white_pixel_ratio = np.sum(img > 127) / img.size  # Assuming 127 as the midpoint for grayscale
+
     if img is None:
-        return None  # Handle invalid image files
-    # Invert the colors if white occupies more than 50% of the image
+        return None  # Handle invalid or unreadable image files
+
+    white_pixel_ratio = np.sum(img > 127) / img.size  # Check brightness
+
     if white_pixel_ratio > 0.5:
         img = cv2.bitwise_not(img)
-    img = resize_with_padding(img, target_size=(28, 28))  # Resize while keeping aspect ratio
-    img = img / 255.0  # Normalize pixel values to [0, 1]
+
+    img = resize_with_padding(img, target_size=(28, 28))
+    img = img / 255.0
     img = np.expand_dims(img, axis=0)  # Add batch dimension
     return img
+
 
 # Function to resize while keeping aspect ratio
 def resize_with_padding(img, target_size=(28, 28)):

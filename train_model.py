@@ -35,7 +35,7 @@ model.compile(optimizer='adam',  # Adam optimizer for adaptive learning rate
 
 # Early stopping callback
 early_stopping = EarlyStopping(monitor='val_loss',  # Watch validation loss
-                               patience=3,  # Stop training if no improvement after x epochs
+                               patience=5,  # Stop training if no improvement after x epochs
                                restore_best_weights=True)  # Restore the best weights from training
 
 # Train the model

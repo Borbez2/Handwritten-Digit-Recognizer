@@ -1,4 +1,4 @@
-# Simple-Neural-Network-MNIST
+# Handwritten-Digit-Recognizer
 
 This project trains a neural network to recognize handwritten digits using the MNIST dataset and then tests its performance. 
 It also allows you to test the model on your custom images.

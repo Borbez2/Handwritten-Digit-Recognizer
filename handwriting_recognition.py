@@ -94,7 +94,7 @@ for file_name in os.listdir(image_folder):
         prediction = model.predict(img, verbose=0)  # Suppress verbose output
         
         # Get the digit with highest probability
-        # np.argmax returns the index (0-9) with the highest value
+        # returns the index (0-9) with the highest value
         predicted_digit = np.argmax(prediction)
         
         # Print the prediction result

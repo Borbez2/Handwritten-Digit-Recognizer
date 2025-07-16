@@ -37,7 +37,7 @@ early_stopping = EarlyStopping(monitor='val_loss',  # Watch validation loss
                                patience=5,  # Stop training if no improvement after x epochs
                                restore_best_weights=True)  # Restore the best weights from training
 
-# Train the model
+# Train the actual model
 history = model.fit(x_train, y_train,  # Train on the normalized training data
                     validation_split=0.1,  # Use 10% of training data for validation
                     epochs=50,  # Set a high max number of epochs

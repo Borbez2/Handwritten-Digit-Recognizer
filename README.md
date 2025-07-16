@@ -55,7 +55,7 @@ You can modify hyperparameters in the script to experiment with different config
 1. Place your handwritten digit images in the `Images` folder (PNG, JPG, or JPEG format)
 2. Run the recognition script:
    ```bash
-   python handwriting_recognition.py
+   python3 handwriting_recognition.py
    ```
 3. The script will display each image with its predicted digit
 

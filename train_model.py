@@ -1,4 +1,3 @@
-import numpy as np  # Used for numpy arrays
 import tensorflow as tf  # Machine learning
 from tensorflow.keras import Sequential  # Sequential model type
 from tensorflow.keras.layers import Flatten, Dense, Dropout, Input  # Neural network layers
@@ -33,7 +32,7 @@ model.compile(optimizer='adam',  # Adam optimizer for adaptive learning rate
               loss='sparse_categorical_crossentropy',  # Loss function for multi-class classification
               metrics=['accuracy'])  # Track accuracy during training
 
-# Early stopping callback
+# Early stopping
 early_stopping = EarlyStopping(monitor='val_loss',  # Watch validation loss
                                patience=5,  # Stop training if no improvement after x epochs
                                restore_best_weights=True)  # Restore the best weights from training
